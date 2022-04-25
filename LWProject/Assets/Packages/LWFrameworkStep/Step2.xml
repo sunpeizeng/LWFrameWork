@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Manager>
+  <Step Num="0" UniqueId="" StepScript="LWFramework.Step.ChapterStep" Remark="2211" />
+  <Step Num="1" UniqueId="30F9F0E09D61CB30BA3AC1AD52B009A1" StepScript="LWFramework.Step.NodeStep" Remark="">
+    <Triggers />
+    <Controls />
+  </Step>
+  <Step Num="2" UniqueId="" StepScript="LWFramework.Step.NodeStep" Remark="">
+    <Triggers />
+    <Controls>
+      <Control ScriptName="LWFramework.Step.SC_ChangePosi" ObjectName="Cube" MoveTime="1" Remark="">
+        <Datas>
+          <Position x="0" y="0" z="0" />
+          <Position x="0" y="-1" z="0" />
+        </Datas>
+      </Control>
+    </Controls>
+  </Step>
+</Manager>

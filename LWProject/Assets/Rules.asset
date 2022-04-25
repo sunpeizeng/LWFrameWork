@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03142c330ced64e0ab46cddcd0484ab7, type: 3}
+  m_Name: Rules
+  m_EditorClassIdentifier: 
+  build: 107
+  major: 0
+  minor: 0
+  scenesFolders:
+  - Assets/@Resources/Scenes
+  autoRecord: 1
+  autoGroupByDirectories:
+  - Assets/@Resources/Sprites
+  validateAssetPath: 0
+  allAssetsToBuild: 0
+  patchesInBuild:
+  - PlantUpdate
+  scenesInBuild:
+  - {fileID: 102900000, guid: e9b50fe6b4c7a674f8a00e7124ba91c5, type: 3}
+  extension: .bundle
+  nameByHash: 0
+  options: 256
+  assets:
+  - name: Assets/@Resources/Prefabs/TestHotfixView.prefab
+    group: 
+    bundle: assets_@resources_prefabs_testhotfixview.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Prefabs/CubeRigidbody.prefab
+    group: 
+    bundle: assets_@resources_prefabs_cuberigidbody.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Prefabs/UIRoot3.prefab
+    group: 
+    bundle: assets_@resources_prefabs_uiroot3.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Prefabs/UIRoot2.prefab
+    group: 
+    bundle: assets_@resources_prefabs_uiroot2.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Prefabs/UIRoot.prefab
+    group: 
+    bundle: assets_@resources_prefabs_uiroot.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Prefabs/TestChildItem.prefab
+    group: 
+    bundle: assets_@resources_prefabs_testchilditem.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Sprites/log3.png
+    group: 
+    bundle: assets_@resources_sprites.bundle
+    id: 0
+    groupBy: 3
+  - name: Assets/@Resources/Scenes/HotfixPatch.unity
+    group: 
+    bundle: assets_@resources_scenes_hotfixpatch.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Hotfix/hotfix.dll.byte
+    group: 
+    bundle: 
+    id: 0
+    groupBy: 0
+  - name: Assets/@Resources/Scenes/TestScene.unity
+    group: 
+    bundle: assets_@resources_scenes_testscene.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Prefabs/Cube.prefab
+    group: 
+    bundle: assets_@resources_prefabs_cube.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Sprites/common_image_bg.png
+    group: 
+    bundle: assets_@resources_sprites.bundle
+    id: 0
+    groupBy: 3
+  - name: Assets/@Resources/Sprites/UnityLogo.png
+    group: 
+    bundle: assets_@resources_sprites.bundle
+    id: 0
+    groupBy: 3
+  - name: Assets/@Resources/Sprites/log2.png
+    group: 
+    bundle: assets_@resources_sprites.bundle
+    id: 0
+    groupBy: 3
+  - name: Assets/@Resources/Sprites/blackSquare.png
+    group: 
+    bundle: assets_@resources_sprites.bundle
+    id: 0
+    groupBy: 3
+  - name: Assets/@Resources/Prefabs/LoadCtrlView.prefab
+    group: 
+    bundle: assets_@resources_prefabs_loadctrlview.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Audio/BG.mp3
+    group: 
+    bundle: assets_@resources_audio_bg.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/Audio/Clip.mp3
+    group: 
+    bundle: assets_@resources_audio_clip.bundle
+    id: 0
+    groupBy: 2
+  patches:
+  - name: TestScene
+    assets:
+    - Assets/@Resources/Scenes/TestScene.unity
+    - Assets/@Resources/Sprites/log2.png
+    - Assets/@Resources/Prefabs/TestChildItem.prefab
+    - Assets/@Resources/Sprites/log3.png
+    - Assets/@Resources/Prefabs/UIRoot.prefab
+    - Assets/@Resources/Sprites/blackSquare.png
+    - Assets/@Resources/Prefabs/TestHotfixView.prefab
+    - Assets/@Resources/Sprites/common_image_bg.png
+    - Assets/@Resources/Prefabs/UIRoot3.prefab
+    - Assets/@Resources/Sprites/UnityLogo.png
+    - Assets/@Resources/Prefabs/UIRoot2.prefab
+    - Assets/@Resources/Prefabs/CubeRigidbody.prefab
+    - Assets/@Resources/Prefabs/Cube.prefab
+    - Assets/@Resources/Prefabs/LoadCtrlView.prefab
+  - name: HotfixPatch
+    assets:
+    - Assets/@Resources/Scenes/HotfixPatch.unity
+    - Assets/@Resources/Prefabs/LoadCtrlView.prefab
+    - Assets/@Resources/Prefabs/Cube.prefab
+    - Assets/@Resources/Audio/BG.mp3
+    - Assets/@Resources/Audio/Clip.mp3
+  bundles:
+  - assetBundleName: assets_@resources_prefabs_testhotfixview.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/TestHotfixView.prefab
+  - assetBundleName: assets_@resources_prefabs_cuberigidbody.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/CubeRigidbody.prefab
+  - assetBundleName: assets_@resources_prefabs_uiroot3.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/UIRoot3.prefab
+  - assetBundleName: assets_@resources_prefabs_uiroot2.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/UIRoot2.prefab
+  - assetBundleName: assets_@resources_prefabs_uiroot.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/UIRoot.prefab
+  - assetBundleName: assets_@resources_prefabs_testchilditem.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/TestChildItem.prefab
+  - assetBundleName: assets_@resources_sprites.bundle
+    assetNames:
+    - Assets/@Resources/Sprites/log3.png
+    - Assets/@Resources/Sprites/common_image_bg.png
+    - Assets/@Resources/Sprites/UnityLogo.png
+    - Assets/@Resources/Sprites/log2.png
+    - Assets/@Resources/Sprites/blackSquare.png
+  - assetBundleName: assets_@resources_scenes_hotfixpatch.bundle
+    assetNames:
+    - Assets/@Resources/Scenes/HotfixPatch.unity
+  - assetBundleName: assets_@resources_scenes_testscene.bundle
+    assetNames:
+    - Assets/@Resources/Scenes/TestScene.unity
+  - assetBundleName: assets_@resources_prefabs_cube.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/Cube.prefab
+  - assetBundleName: assets_@resources_prefabs_loadctrlview.bundle
+    assetNames:
+    - Assets/@Resources/Prefabs/LoadCtrlView.prefab
+  - assetBundleName: assets_@resources_audio_bg.bundle
+    assetNames:
+    - Assets/@Resources/Audio/BG.mp3
+  - assetBundleName: assets_@resources_audio_clip.bundle
+    assetNames:
+    - Assets/@Resources/Audio/Clip.mp3
+  currentScene: TestScene

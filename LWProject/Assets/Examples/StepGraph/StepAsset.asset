@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609e4647c702c93428e56cad307a86a8, type: 3}
+  m_Name: StepAsset
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: m_StepNodeList
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[LWFramework.Step.IStep, LWStep.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LWFramework.Step.NodeStep, LWStep.Runtime
+    - Name: m_Num
+      Entry: 3
+      Data: 0
+    - Name: m_UniqueId
+      Entry: 1
+      Data: B583D662F3EA698915EB7556B53686B7
+    - Name: m_Remark
+      Entry: 6
+      Data: 
+    - Name: m_StepTriggerList
+      Entry: 6
+      Data: 
+    - Name: m_StepControllerList
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

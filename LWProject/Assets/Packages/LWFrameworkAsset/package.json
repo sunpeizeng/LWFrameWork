@@ -1,0 +1,12 @@
+{
+    "name": "com.cb.lwframeworkasset",
+    "displayName": "LWFrameworkAsset",
+    "version": "5.1.3",
+    "description": "自用工具",
+    "author": "chenbin",
+    "license": "MIT",
+    "unity": "2018.4",
+    "type": "library",
+    "enableLockFile": true,
+    "resolutionStrategy": "highest"
+}

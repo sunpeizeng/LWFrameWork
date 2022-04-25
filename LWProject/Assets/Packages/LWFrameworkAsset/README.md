@@ -1,0 +1,10 @@
+Asset资源管理修改于XAsset5.0.
+使用注意事项
+
+Patches4Init 默认需要更新的分包 玩家可以在配置选项中设置
+
+
+PatchesInBuild 打包时将分包复制到StreamingAssetPath路径中，后面服务端有新的版本会自动更新新版本到下载目录。
+当PatchesInBuild.Count=0时相当于是将所有资源复制到StreamingAssetPath中
+
+编辑器下测试关闭Dev模式不会更新资源到AppData目录下，会直接加载Bundle目录下的资源，开启Dev模式会下载资源到AppData

@@ -1,0 +1,39 @@
+﻿using Cysharp.Threading.Tasks;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace LWFramework.Core
+{
+    /// <summary>
+    /// 授权者基类
+    /// </summary>
+    public abstract class BaseLicense
+    {
+        /// <summary>
+        /// 是否授权通过
+        /// </summary>
+        public bool IsLicensePass { get; protected set; } = false;
+        /// <summary>
+        /// 授权失败提示
+        /// </summary>
+        public virtual string LicenseFailurePrompt
+        {
+            get
+            {
+                return "授权未通过！";
+            }
+        }
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        public virtual void Init()
+        { }
+        /// <summary>
+        /// 授权校验
+        /// </summary>
+        public abstract  UniTask Checking();
+
+
+    }
+}

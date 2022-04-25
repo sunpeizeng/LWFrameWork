@@ -1,0 +1,18 @@
+#if UNITY_ANDROID      
+#elif  UNITY_EDITOR || UNITY_STANDALONE_WIN
+
+#endif
+
+UNITY_EDITOR
+UNITY_ANDROID
+UNITY_IPHONE
+UNITY_STANDALONE_WIN
+
+
+
+
+Ctrl +M +O 折叠所有方法
+
+Ctrl +M +L 展开所有方法
+
+Ctrl +M +M 折叠或展开当前方法

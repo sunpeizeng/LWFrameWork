@@ -1,0 +1,12 @@
+{
+    "name": "com.cb.lwframeworkspeech",
+    "displayName": "LWFrameworkSpeech",
+    "version": "0.0.1",
+    "description": "微软语音服务可用于PC Android",
+    "author": "chenbin",
+    "license": "MIT",
+    "unity": "2019.4",
+    "type": "library",
+    "enableLockFile": true,
+    "resolutionStrategy": "highest"
+}

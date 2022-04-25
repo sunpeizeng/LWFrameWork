@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Manager>
+  <Node Num="0" UniqueId="" StepScript="LWFramework.Step.StepNode" Remark="">
+    <Triggers />
+    <Controls>
+      <Control ScriptName="LWFramework.Step.SC_ChangePosi" ObjectName="Cube" MoveTime="1" Remark="">
+        <Datas>
+          <Position x="0" y="0" z="0" />
+          <Position x="0" y="3" z="0" />
+        </Datas>
+      </Control>
+    </Controls>
+  </Node>
+  <Node Num="1" UniqueId="536DCDDCA43CFA14E321239F714F7C6E" StepScript="LWFramework.Step.StepNode" Remark="">
+    <Triggers>
+      <Trigger ScriptName="LWFramework.Step.ST_WaitTime" WaitTime="5" m_ResultIndex="0" />
+    </Triggers>
+    <Controls />
+  </Node>
+</Manager>

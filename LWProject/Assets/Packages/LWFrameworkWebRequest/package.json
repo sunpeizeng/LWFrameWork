@@ -1,0 +1,14 @@
+{
+    "name": "com.cb.lwframeworkwebrequest",
+    "displayName": "LWFrameworkWebRequest",
+    "version": "1.2.2",
+    "description": "Õ¯¬Á«Î«Û",
+    "author": "chenbin",
+    "license": "MIT",
+    "unity": "2018.4",
+    "enableLockFile": true,
+    "resolutionStrategy": "highest",
+    "dependencies": {
+        "com.cysharp.unitask": "2.0.31"
+    }
+}

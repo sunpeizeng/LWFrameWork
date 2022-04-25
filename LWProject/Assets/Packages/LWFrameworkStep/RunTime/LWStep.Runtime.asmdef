@@ -1,0 +1,15 @@
+{
+    "name": "LWStep.Runtime",
+    "references": [
+        "LW.Runtime",
+        "UniTask"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

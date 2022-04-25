@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Manager>
+  <Node Index="0" ScriptName="StepXml" Remark="2231123">
+    <Triggers>
+      <Trigger ScriptName="ST_MouseDown" ObjectName="Sphere" m_ResultIndex="1" />
+    </Triggers>
+    <Controls>
+      <Control ScriptName="SC_ChangePosi" ObjectName="Sphere" MoveTime="1">
+        <Datas>
+          <Position x="1.009" y="0.94" z="0" />
+          <Position x="1.009" y="0.94" z="0" />
+          <Position x="-0.584" y="0.94" z="0" />
+        </Datas>
+      </Control>
+    </Controls>
+  </Node>
+  <Node Index="1" ScriptName="StepXml" Remark="2231123">
+    <Triggers>
+      <Trigger ScriptName="ST_MouseDown" ObjectName="Cube" m_ResultIndex="2" />
+    </Triggers>
+    <Controls>
+      <Control ScriptName="SC_ChangePosi" ObjectName="Cube" MoveTime="1">
+        <Datas>
+          <Position x="1.009" y="0.94" z="0" />
+          <Position x="1.009" y="0.94" z="0" />
+          <Position x="-0.584" y="0.94" z="0" />
+        </Datas>
+      </Control>
+    </Controls>
+  </Node>
+</Manager>
+
