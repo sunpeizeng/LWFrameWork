@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 82972030
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets_@resources_prefabs_testhotfixview.bundle
+      Dependencies:
+        Dependency_0: assets_@resources_prefabs_testchilditem.bundle
+    Info_1:
+      Name: assets_@resources_prefabs_cuberigidbody.bundle
+      Dependencies: {}
+    Info_2:
+      Name: assets_@resources_prefabs_uiroot3.bundle
+      Dependencies: {}
+    Info_3:
+      Name: assets_@resources_prefabs_uiroot2.bundle
+      Dependencies: {}
+    Info_4:
+      Name: assets_@resources_prefabs_uiroot.bundle
+      Dependencies: {}
+    Info_5:
+      Name: assets_@resources_prefabs_testchilditem.bundle
+      Dependencies: {}
+    Info_6:
+      Name: assets_@resources_sprites.bundle
+      Dependencies: {}
+    Info_7:
+      Name: assets_@resources_scenes_hotfixpatch.bundle
+      Dependencies: {}
+    Info_8:
+      Name: assets_@resources_scenes_testscene.bundle
+      Dependencies: {}
+    Info_9:
+      Name: assets_@resources_prefabs_cube.bundle
+      Dependencies: {}
+    Info_10:
+      Name: assets_@resources_prefabs_loadctrlview.bundle
+      Dependencies: {}
+    Info_11:
+      Name: assets_@resources_audio_bg.bundle
+      Dependencies: {}
+    Info_12:
+      Name: assets_@resources_audio_clip.bundle
+      Dependencies: {}
