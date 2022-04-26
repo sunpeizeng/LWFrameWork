@@ -19,9 +19,6 @@ public class ABAssetsManger : IAssetsManager,IManager
     //快速清理的缓存
     private List<AssetRequest> m_AutoClearRequestList;
 
-    /// <summary>
-    /// 分管理器刷新Init
-    /// </summary>
     public void Init()
     {
         if (_abInitUpdate == null) {
