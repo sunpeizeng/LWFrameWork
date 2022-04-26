@@ -19,6 +19,9 @@ public class ABAssetsManger : IAssetsManager,IManager
     //快速清理的缓存
     private List<AssetRequest> m_AutoClearRequestList;
 
+    /// <summary>
+    /// 分管理器刷新Init
+    /// </summary>
     public void Init()
     {
         if (_abInitUpdate == null) {
@@ -30,9 +33,13 @@ public class ABAssetsManger : IAssetsManager,IManager
         AssetsInitialize().Forget();
     }
 
+    /// <summary>
+    /// 分管理器刷新Update
+    /// </summary>
     public void Update()
     {
     }
+
     public T Load<T>(string path, bool autoClearCache = true)
     {
         AssetRequest request = GetRequest<AssetRequest, T>(path, autoClearCache);//Assets.LoadAsset(path, typeof(T));

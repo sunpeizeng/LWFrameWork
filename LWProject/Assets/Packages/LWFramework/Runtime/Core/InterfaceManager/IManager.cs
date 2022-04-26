@@ -9,5 +9,4 @@ public interface IManager
  
     void Update();
 
-   // void LateUpdate();
 }
