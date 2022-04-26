@@ -75,6 +75,9 @@ namespace libx
             return string.Format("{0}, size:{1}, hash:{2}", url, len, hash);
         }
 
+        /// <summary>
+        /// 下载器逐个开始下载对应资源
+        /// </summary>
         public void Start()
         {
             error = null;

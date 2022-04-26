@@ -511,8 +511,12 @@ namespace libx
             return _localProtocol + string.Format("{0}{1}", basePath, filename);
         }
 
+        /// <summary>
+        /// 实时更新Downloader
+        /// </summary>
         private static void UpdateDownloaders()
         {
+            //需要下载的物体
             if (Downloaders.Count > 0)
             {
                 for (var i = 0; i < Downloaders.Count; ++i)
