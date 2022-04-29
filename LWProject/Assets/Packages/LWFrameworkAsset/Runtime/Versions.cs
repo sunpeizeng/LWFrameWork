@@ -157,7 +157,9 @@ namespace libx
                     location, hash, crc, string.Join(",", Array.ConvertAll(children, input => input.ToString())));
         }
     }
-
+    /// <summary>
+    /// 版本管理
+    /// </summary>
     public class Versions
     {
         public string ver = new Version(0, 0, 0).ToString();

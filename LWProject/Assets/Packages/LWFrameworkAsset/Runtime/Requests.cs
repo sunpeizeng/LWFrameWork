@@ -35,6 +35,9 @@ using Object = UnityEngine.Object;
 
 namespace libx
 {
+    /// <summary>
+    /// 资源加载状态
+    /// </summary>
     public enum LoadState
     {
         Init,
@@ -42,7 +45,9 @@ namespace libx
         Loaded,
         Unload,
     }
-
+    /// <summary>
+    /// 资源加载管理
+    /// </summary>
     public class AssetRequest : Reference, IEnumerator
     {
         public Type assetType;
@@ -175,7 +180,9 @@ namespace libx
 
         }
     }
-
+    /// <summary>
+    /// Bundle资源加载管理
+    /// </summary>
     public class BundleAssetRequest : AssetRequest
     {
         protected readonly string assetBundleName;
@@ -371,7 +378,9 @@ namespace libx
             loadState = LoadState.Loaded;
         }
     }
-
+    /// <summary>
+    /// 场景资源加载管理
+    /// </summary>
     public class SceneAssetRequest : AssetRequest
     {
         public readonly LoadSceneMode loadSceneMode;

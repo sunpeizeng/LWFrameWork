@@ -31,6 +31,9 @@ using UnityEngine;
 
 namespace libx
 {
+    /// <summary>
+    /// 资源下载器
+    /// </summary>
     public class Downloader
     {
         public static string GetDisplaySpeed(float downloadSpeed)

@@ -28,7 +28,7 @@ public class StartupAB : MonoBehaviour
         MainManager.Instance.GetManager<IAssetsManager>().OnInitUpdateComplete = OnUpdateCallback;
         MainManager.Instance.FirstFSMState = typeof(TestStartProcedure);
         MainManager.Instance.MonoBehaviour = this;
-      
+        
     }
    
     /// <summary>

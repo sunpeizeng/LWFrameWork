@@ -29,6 +29,9 @@ using UnityEngine;
 
 namespace libx
 {
+    /// <summary>
+    /// XAssets中的资源加载引用计数规则
+    /// </summary>
     public class Reference
     {
         public string name { get; set; }

@@ -6,7 +6,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-
+/// <summary>
+/// AB初始化更新
+/// </summary>
 public class ABInitUpdate 
 {
     private Action<bool> _onInitUpdateComplete;
@@ -26,6 +28,7 @@ public class ABInitUpdate
     /// 是否自动更新
     /// </summary>
     private bool m_NotNetEnter { get; set; } = true;
+
     /// <summary>
     /// 设置参数
     /// </summary>
@@ -43,6 +46,9 @@ public class ABInitUpdate
         m_AutoCheckExists = globalConfig.autoCheckExists;
     }
     
+    /// <summary>
+    /// AB加载初始化
+    /// </summary>
     public virtual void AssetsInitialize() {
 
         Assets.Initialize(error =>

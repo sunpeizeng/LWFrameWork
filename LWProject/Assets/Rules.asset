@@ -188,4 +188,4 @@ MonoBehaviour:
   - assetBundleName: assets_@resources_audio_clip.bundle
     assetNames:
     - Assets/@Resources/Audio/Clip.mp3
-  currentScene: TestScene
+  currentScene: HotfixPatch

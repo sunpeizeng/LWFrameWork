@@ -4,6 +4,9 @@ using Debug = UnityEngine.Debug;
 
 namespace libx
 {
+    /// <summary>
+    /// 初始化
+    /// </summary>
     public class Initializer : MonoBehaviour
     {
         public bool splash;

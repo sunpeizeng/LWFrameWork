@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using LWFramework.Core;
 using Cysharp.Threading.Tasks;
-
+/// <summary>
+/// AB资源管理器
+/// </summary>
 public class ABAssetsManger : IAssetsManager,IManager
 {
     private ABInitUpdate _abInitUpdate;
@@ -13,12 +15,14 @@ public class ABAssetsManger : IAssetsManager,IManager
     /// 自定义初始化更新器
     /// </summary>
     //public ABInitUpdate ABInitUpdate { set => _abInitUpdate = value; get => _abInitUpdate; }
-
     //所有的Request
     private Dictionary<string, AssetRequest> m_RequestDic;
     //快速清理的缓存
     private List<AssetRequest> m_AutoClearRequestList;
 
+    /// <summary>
+    /// 当前管理器初始化
+    /// </summary>
     public void Init()
     {
         if (_abInitUpdate == null) {
@@ -31,19 +35,34 @@ public class ABAssetsManger : IAssetsManager,IManager
     }
 
     /// <summary>
-    /// 分管理器刷新Update
+    /// 当前管理器刷新Update
     /// </summary>
     public void Update()
     {
+
     }
 
+    /// <summary>
+    /// 加载AB资源
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="path"></param>
+    /// <param name="autoClearCache"></param>
+    /// <returns></returns>
     public T Load<T>(string path, bool autoClearCache = true)
     {
         AssetRequest request = GetRequest<AssetRequest, T>(path, autoClearCache);//Assets.LoadAsset(path, typeof(T));
                                                                  // AddRequest(path, request);      
         return (T)(object)request.asset;
     }
- 
+
+    /// <summary>
+    /// 异步加载AB资源
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="path"></param>
+    /// <param name="autoClearCache"></param>
+    /// <returns></returns>
     public async UniTask<T> LoadAsync<T>(string path, bool autoClearCache = true)
     {
         AssetRequest request = GetRequestAsync<AssetRequest, T>(path, autoClearCache);//Assets.LoadAssetAsync(path, typeof(T));
@@ -53,7 +72,13 @@ public class ABAssetsManger : IAssetsManager,IManager
         return (T)(object)request.asset;
     }
 
-   
+   /// <summary>
+   /// 异步加载场景
+   /// </summary>
+   /// <param name="scenePath"></param>
+   /// <param name="additive"></param>
+   /// <param name="loadComplete"></param>
+   /// <param name="releaseScene"></param>
     public void LoadSceneAsync(string scenePath,bool additive, System.Action loadComplete = null, bool releaseScene = true)
     {
         SceneAssetRequest sceneAssetRequest = Assets.LoadSceneAsync(scenePath, additive, releaseScene);
@@ -61,9 +86,16 @@ public class ABAssetsManger : IAssetsManager,IManager
         {
             loadComplete?.Invoke();
         };
-       
     }
     
+    /// <summary>
+    /// 获取对应K类型的ab资源
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="K"></typeparam>
+    /// <param name="path"></param>
+    /// <param name="autoClearCache"></param>
+    /// <returns></returns>
     public T GetRequest<T, K>(string path, bool autoClearCache = true)
     {
         AssetRequest request = Assets.LoadAsset(path, typeof(K));
@@ -75,7 +107,15 @@ public class ABAssetsManger : IAssetsManager,IManager
         AddRequest(path, request);
         return (T)(object)request;
     }
-    //在外部使用awati处理异步 可以参考LoadAsync<T>(string path)
+
+    /// <summary>
+    /// 异步获取对应K的AB资源,在外部使用awati处理异步 可以参考LoadAsync<T>(string path)
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="K"></typeparam>
+    /// <param name="path"></param>
+    /// <param name="autoClearCache"></param>
+    /// <returns></returns>
     public T GetRequestAsync<T,K>(string path, bool autoClearCache = true)
     {
         AssetRequest request = Assets.LoadAssetAsync(path, typeof(K));
@@ -86,17 +126,34 @@ public class ABAssetsManger : IAssetsManager,IManager
         }
         return (T)(object)request;
     }
-    //在外部使用awati处理异步
+
+    /// <summary>
+    /// 异步获取对应场景的AB资源,在外部使用awati处理异步
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="scenePath"></param>
+    /// <param name="additive"></param>
+    /// <returns></returns>
     public T GetSceneRequestAsync<T>(string scenePath, bool additive)
     {
         SceneAssetRequest sceneAssetRequest = Assets.LoadSceneAsync(scenePath, additive);
         return (T)(object)sceneAssetRequest;
     }
+
+    /// <summary>
+    /// 根据GameObject卸载资源
+    /// </summary>
+    /// <param name="param"></param>
     public void Unload(object param)
     {
         AssetRequest request = ((AssetRequest)param);
         Unload(request.url);
     }
+
+    /// <summary>
+    /// 根据路径卸载资源
+    /// </summary>
+    /// <param name="path"></param>
     public void Unload(string path) {
         AssetRequest request;
         if (m_RequestDic.TryGetValue(path, out request))
@@ -107,6 +164,11 @@ public class ABAssetsManger : IAssetsManager,IManager
             }           
         }
     }
+
+    /// <summary>
+    /// 根据路径卸载全部资源
+    /// </summary>
+    /// <param name="path"></param>
     public void UnloadAll(string path)
     {
         AssetRequest request;
@@ -118,6 +180,10 @@ public class ABAssetsManger : IAssetsManager,IManager
             m_RequestDic.Remove(path);
         }
     }
+
+    /// <summary>
+    /// 清理全部资源
+    /// </summary>
     public void ClearAllAsset()
     {
         foreach (var request in m_RequestDic.Values)
@@ -129,6 +195,10 @@ public class ABAssetsManger : IAssetsManager,IManager
         }
         m_RequestDic.Clear();
     }
+
+    /// <summary>
+    /// 自动清理缓存资源
+    /// </summary>
     public void ClearAutoCacheAsset()
     {
         for (int i = 0; i < m_AutoClearRequestList.Count; i++)
@@ -143,6 +213,13 @@ public class ABAssetsManger : IAssetsManager,IManager
       
         m_AutoClearRequestList.Clear();
     }
+
+    /// <summary>
+    /// 异步更新分包Assets和场景资源
+    /// </summary>
+    /// <param name="scenePath"></param>
+    /// <param name="additive"></param>
+    /// <param name="loadComplete"></param>
     public void UpdatePatchAndLoadSceneAsync(string scenePath, bool additive, System.Action loadComplete = null)
     {
         string patchName = scenePath.Substring(scenePath.LastIndexOf("/") + 1, (scenePath.LastIndexOf(".") - scenePath.LastIndexOf("/") - 1));
@@ -155,6 +232,12 @@ public class ABAssetsManger : IAssetsManager,IManager
             };          
         });
     }
+
+    /// <summary>
+    /// 更新单个分包资源
+    /// </summary>
+    /// <param name="patchName"></param>
+    /// <param name="loadComplete"></param>
     public void UpdatePatchAsset(string patchName, System.Action loadComplete = null)
     {
         _abInitUpdate.UpdateAsset(new[] { patchName }, "更新提示", () =>
@@ -162,6 +245,12 @@ public class ABAssetsManger : IAssetsManager,IManager
             loadComplete?.Invoke();
         });
     }
+
+    /// <summary>
+    /// 更新多个分包资源
+    /// </summary>
+    /// <param name="patchNameArray"></param>
+    /// <param name="loadComplete"></param>
     public void UpdatePatchAsset(string[] patchNameArray, System.Action loadComplete = null)
     {
         _abInitUpdate.UpdateAsset(patchNameArray, "更新提示", () =>
@@ -169,6 +258,7 @@ public class ABAssetsManger : IAssetsManager,IManager
             loadComplete?.Invoke();
         });
     }
+
     /// <summary>
     /// 管理所有的Request
     /// </summary>
@@ -193,6 +283,7 @@ public class ABAssetsManger : IAssetsManager,IManager
         request.Require(go);
         return go;
     }
+
     /// <summary>
     /// 通过AB路径创建GameObject对象
     /// </summary>
