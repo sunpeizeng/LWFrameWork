@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1851863342
+CRC: 961231521
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fb620a3afeb57f4aa409c7c8c03ab20b
+    Hash: ea4a62c39139508a87471bc10a2a954e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 7daaca79f2eb854111401838e0bdb54d
+    Hash: 5548015dafc590fb4ae5ab97924ed188
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -42,4 +42,4 @@ ClassTypes:
 Assets:
 - Assets/@Resources/Prefabs/TestHotfixView.prefab
 Dependencies:
-- F:/2021/Test/LW-Project-Gitee/LWProject/Bundles/Windows/assets_@resources_prefabs_testchilditem.bundle
+- E:/WorkProject/LWFrameWorkSource/LWProject/Bundles/Windows/assets_@resources_prefabs_testchilditem.bundle

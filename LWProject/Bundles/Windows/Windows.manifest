@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 82972030
+CRC: 4182571815
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -22,7 +22,7 @@ AssetBundleManifest:
       Name: assets_@resources_prefabs_testchilditem.bundle
       Dependencies: {}
     Info_6:
-      Name: assets_@resources_sprites.bundle
+      Name: assets_@resources_sprites_log3.bundle
       Dependencies: {}
     Info_7:
       Name: assets_@resources_scenes_hotfixpatch.bundle
@@ -34,11 +34,26 @@ AssetBundleManifest:
       Name: assets_@resources_prefabs_cube.bundle
       Dependencies: {}
     Info_10:
-      Name: assets_@resources_prefabs_loadctrlview.bundle
+      Name: assets_@resources_sprites_common_image_bg.bundle
       Dependencies: {}
     Info_11:
-      Name: assets_@resources_audio_bg.bundle
+      Name: assets_@resources_sprites_unitylogo.bundle
       Dependencies: {}
     Info_12:
+      Name: assets_@resources_sprites_log2.bundle
+      Dependencies: {}
+    Info_13:
+      Name: assets_@resources_sprites_blacksquare.bundle
+      Dependencies: {}
+    Info_14:
+      Name: assets_@resources_prefabs_loadctrlview.bundle
+      Dependencies: {}
+    Info_15:
+      Name: assets_@resources_audio_bg.bundle
+      Dependencies: {}
+    Info_16:
       Name: assets_@resources_audio_clip.bundle
+      Dependencies: {}
+    Info_17:
+      Name: assets_@resources_abc.bundle
       Dependencies: {}

@@ -7,7 +7,7 @@ using UnityEngine;
 namespace LWFramework.Core {
     public class LicenseLocalDate : BaseLicense
     {
-        private string m_EndTime = "2021-04-01 00:00:00";
+        private string m_EndTime = "2030-05-01 00:00:00";
         private string m_NowTime;
 
         public override void Init()

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03142c330ced64e0ab46cddcd0484ab7, type: 3}
   m_Name: Rules
   m_EditorClassIdentifier: 
-  build: 107
+  build: 109
   major: 0
   minor: 0
   scenesFolders:
@@ -21,11 +21,10 @@ MonoBehaviour:
   autoGroupByDirectories:
   - Assets/@Resources/Sprites
   validateAssetPath: 0
-  allAssetsToBuild: 0
-  patchesInBuild:
-  - PlantUpdate
+  allAssetsToBuild: 1
+  patchesInBuild: []
   scenesInBuild:
-  - {fileID: 102900000, guid: e9b50fe6b4c7a674f8a00e7124ba91c5, type: 3}
+  - {fileID: 102900000, guid: 013473dfc1cd4af4eb1ed5dbd839b05b, type: 3}
   extension: .bundle
   nameByHash: 0
   options: 256
@@ -62,9 +61,9 @@ MonoBehaviour:
     groupBy: 2
   - name: Assets/@Resources/Sprites/log3.png
     group: 
-    bundle: assets_@resources_sprites.bundle
+    bundle: assets_@resources_sprites_log3.bundle
     id: 0
-    groupBy: 3
+    groupBy: 2
   - name: Assets/@Resources/Scenes/HotfixPatch.unity
     group: 
     bundle: assets_@resources_scenes_hotfixpatch.bundle
@@ -87,24 +86,24 @@ MonoBehaviour:
     groupBy: 2
   - name: Assets/@Resources/Sprites/common_image_bg.png
     group: 
-    bundle: assets_@resources_sprites.bundle
+    bundle: assets_@resources_sprites_common_image_bg.bundle
     id: 0
-    groupBy: 3
+    groupBy: 2
   - name: Assets/@Resources/Sprites/UnityLogo.png
     group: 
-    bundle: assets_@resources_sprites.bundle
+    bundle: assets_@resources_sprites_unitylogo.bundle
     id: 0
-    groupBy: 3
+    groupBy: 2
   - name: Assets/@Resources/Sprites/log2.png
     group: 
-    bundle: assets_@resources_sprites.bundle
+    bundle: assets_@resources_sprites_log2.bundle
     id: 0
-    groupBy: 3
+    groupBy: 2
   - name: Assets/@Resources/Sprites/blackSquare.png
     group: 
-    bundle: assets_@resources_sprites.bundle
+    bundle: assets_@resources_sprites_blacksquare.bundle
     id: 0
-    groupBy: 3
+    groupBy: 2
   - name: Assets/@Resources/Prefabs/LoadCtrlView.prefab
     group: 
     bundle: assets_@resources_prefabs_loadctrlview.bundle
@@ -118,6 +117,11 @@ MonoBehaviour:
   - name: Assets/@Resources/Audio/Clip.mp3
     group: 
     bundle: assets_@resources_audio_clip.bundle
+    id: 0
+    groupBy: 2
+  - name: Assets/@Resources/ABC.mat
+    group: 
+    bundle: assets_@resources_abc.bundle
     id: 0
     groupBy: 2
   patches:
@@ -137,6 +141,9 @@ MonoBehaviour:
     - Assets/@Resources/Prefabs/CubeRigidbody.prefab
     - Assets/@Resources/Prefabs/Cube.prefab
     - Assets/@Resources/Prefabs/LoadCtrlView.prefab
+    - Assets/@Resources/ABC.mat
+    - Assets/@Resources/Audio/Clip.mp3
+    - Assets/@Resources/Audio/BG.mp3
   - name: HotfixPatch
     assets:
     - Assets/@Resources/Scenes/HotfixPatch.unity
@@ -144,6 +151,36 @@ MonoBehaviour:
     - Assets/@Resources/Prefabs/Cube.prefab
     - Assets/@Resources/Audio/BG.mp3
     - Assets/@Resources/Audio/Clip.mp3
+    - Assets/@Resources/Sprites/UnityLogo.png
+    - Assets/@Resources/Prefabs/CubeRigidbody.prefab
+    - Assets/@Resources/Prefabs/TestChildItem.prefab
+    - Assets/@Resources/Prefabs/TestHotfixView.prefab
+    - Assets/@Resources/Prefabs/UIRoot.prefab
+    - Assets/@Resources/Prefabs/UIRoot2.prefab
+    - Assets/@Resources/Prefabs/UIRoot3.prefab
+    - Assets/@Resources/Sprites/blackSquare.png
+    - Assets/@Resources/Sprites/log2.png
+    - Assets/@Resources/Sprites/common_image_bg.png
+    - Assets/@Resources/Sprites/log3.png
+    - Assets/@Resources/ABC.mat
+  - name: RulesPatchTestScene
+    assets:
+    - Assets/@Resources/Audio/Clip.mp3
+    - Assets/@Resources/Audio/BG.mp3
+    - Assets/@Resources/Prefabs/LoadCtrlView.prefab
+    - Assets/@Resources/Prefabs/CubeRigidbody.prefab
+    - Assets/@Resources/Prefabs/Cube.prefab
+    - Assets/@Resources/Prefabs/TestChildItem.prefab
+    - Assets/@Resources/Prefabs/TestHotfixView.prefab
+    - Assets/@Resources/Prefabs/UIRoot.prefab
+    - Assets/@Resources/Prefabs/UIRoot2.prefab
+    - Assets/@Resources/Prefabs/UIRoot3.prefab
+    - Assets/@Resources/Sprites/blackSquare.png
+    - Assets/@Resources/Sprites/log2.png
+    - Assets/@Resources/Sprites/common_image_bg.png
+    - Assets/@Resources/Sprites/log3.png
+    - Assets/@Resources/Sprites/UnityLogo.png
+    - Assets/@Resources/ABC.mat
   bundles:
   - assetBundleName: assets_@resources_prefabs_testhotfixview.bundle
     assetNames:
@@ -163,13 +200,9 @@ MonoBehaviour:
   - assetBundleName: assets_@resources_prefabs_testchilditem.bundle
     assetNames:
     - Assets/@Resources/Prefabs/TestChildItem.prefab
-  - assetBundleName: assets_@resources_sprites.bundle
+  - assetBundleName: assets_@resources_sprites_log3.bundle
     assetNames:
     - Assets/@Resources/Sprites/log3.png
-    - Assets/@Resources/Sprites/common_image_bg.png
-    - Assets/@Resources/Sprites/UnityLogo.png
-    - Assets/@Resources/Sprites/log2.png
-    - Assets/@Resources/Sprites/blackSquare.png
   - assetBundleName: assets_@resources_scenes_hotfixpatch.bundle
     assetNames:
     - Assets/@Resources/Scenes/HotfixPatch.unity
@@ -179,6 +212,18 @@ MonoBehaviour:
   - assetBundleName: assets_@resources_prefabs_cube.bundle
     assetNames:
     - Assets/@Resources/Prefabs/Cube.prefab
+  - assetBundleName: assets_@resources_sprites_common_image_bg.bundle
+    assetNames:
+    - Assets/@Resources/Sprites/common_image_bg.png
+  - assetBundleName: assets_@resources_sprites_unitylogo.bundle
+    assetNames:
+    - Assets/@Resources/Sprites/UnityLogo.png
+  - assetBundleName: assets_@resources_sprites_log2.bundle
+    assetNames:
+    - Assets/@Resources/Sprites/log2.png
+  - assetBundleName: assets_@resources_sprites_blacksquare.bundle
+    assetNames:
+    - Assets/@Resources/Sprites/blackSquare.png
   - assetBundleName: assets_@resources_prefabs_loadctrlview.bundle
     assetNames:
     - Assets/@Resources/Prefabs/LoadCtrlView.prefab
@@ -188,4 +233,7 @@ MonoBehaviour:
   - assetBundleName: assets_@resources_audio_clip.bundle
     assetNames:
     - Assets/@Resources/Audio/Clip.mp3
-  currentScene: HotfixPatch
+  - assetBundleName: assets_@resources_abc.bundle
+    assetNames:
+    - Assets/@Resources/ABC.mat
+  currentScene: TestScene
